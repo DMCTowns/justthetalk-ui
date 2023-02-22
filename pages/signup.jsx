@@ -56,6 +56,7 @@ export default function Signup() {
   const [passwordError, setPasswordError] = useState(false)
   const [agreeTermsError, setAgreeTermsError] = useState('')
   const [errorText, setErrorText] = useState('')
+  const [signUpComplete, setSignUpComplete] = useState(false)
 
   useEffect(() => {
     dispatch(clearUserActionState())
@@ -72,7 +73,12 @@ export default function Signup() {
     }
   }, [actionState, actionError])
 
+  useEffect(() => {
+    setErrorText(actionError)
+  }, [actionError])
+
   const onSubmit = token => {
+    dispatch(clearUserActionState())
     const tokenValue = token || recaptchaResponse
     let valid = true
 
@@ -117,7 +123,9 @@ export default function Signup() {
     }
 
     if (valid) {
-      dispatch(createUser({ email, username, password, agreeTerms, recaptchaResponse: tokenValue }))
+      dispatch(createUser({ email, username, password, agreeTerms, recaptchaResponse: tokenValue })).then(result =>
+        setSignUpComplete(Boolean(result))
+      )
     }
   }
 
@@ -127,18 +135,26 @@ export default function Signup() {
 
   const onChangeUsername = ev => {
     setUsername(ev.target.value.trim())
+    setErrorText('')
+    setUsernameError(false)
   }
 
   const onChangePassword = ev => {
     setPassword(ev.target.value.trim())
+    setErrorText('')
+    setPasswordError(false)
   }
 
   const onChangeConfirmPassword = ev => {
     setConfirmPassword(ev.target.value.trim())
+    setErrorText('')
+    setPasswordError(false)
   }
 
   const onChangeAgreeTerms = ev => {
     setAgreeTerms(ev.target.checked)
+    setErrorText('')
+    setAgreeTermsError(false)
   }
 
   const onChangeCaptcha = ev => {
@@ -149,10 +165,25 @@ export default function Signup() {
     e.preventDefault()
     grecaptcha.ready(() => {
       grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_KEY, { action: 'submit' }).then(function (token) {
+        console.log('ReCaptcha token found', token)
         setRecaptchaResponse(token)
         onSubmit(token)
       })
     })
+  }
+
+  const renderSuccessView = () => {
+    return (
+      <WidePageLayout title="JUSTtheTalk - Sign up">
+        <div className={styles.content}>
+          <div className={styles.loginFormContainer}>
+            <div>
+              <p>Sign-up sucessful. Please check your email to complete the process.</p>
+            </div>
+          </div>
+        </div>
+      </WidePageLayout>
+    )
   }
 
   const renderSignup = () => {
@@ -300,6 +331,9 @@ export default function Signup() {
     )
   }
 
+  if (signUpComplete) {
+    return renderSuccessView()
+  }
   if (currentUser && actionState === LoadingState.Pending) {
     return (
       <Alert
@@ -308,9 +342,8 @@ export default function Signup() {
         You are already logged in. You cannot sign up while you're logged in.
       </Alert>
     )
-  } else {
-    return renderSignup()
   }
+  return renderSignup()
 }
 
 export async function getStaticProps(context) {
