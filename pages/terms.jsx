@@ -399,8 +399,8 @@ export default function Terms() {
           </ul>
 
           <p>
-            If you have suggestions or questions about any aspect of community participation on JUSTtheTalk.com, you can
-            write to <a href="mailto:help@justthetalk.co.uk">help@justthetalk.co.uk</a>
+            If you have suggestions or questions about any aspect of community participation on justthetalk.co.uk, you
+            can write to <a href="mailto:help@justthetalk.co.uk">help@justthetalk.co.uk</a>
           </p>
           <p>These guidelines should be followed in the context of the Terms and Conditions.</p>
           <p>Our privacy policy and cookie policy can be found in the terms and conditions.</p>

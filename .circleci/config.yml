@@ -33,7 +33,7 @@ jobs:
       - run: echo $JUSTTHETALK_BUILD_NUM
       - run: mkdir -p ~/.ssh
       - run: touch ~/.ssh/known_hosts
-      - run: echo 'justthetalk.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDjO6cmYwqSA0JRMPXC7I3ufaltngzy5QUcgoQABzyJvj44gbZFCDjTCa/+m8J3dO/U8JAfX+XOTlwTW5R2/WVw=' >> ~/.ssh/known_hosts
+      - run: echo 'justthetalk.co.uk ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDjO6cmYwqSA0JRMPXC7I3ufaltngzy5QUcgoQABzyJvj44gbZFCDjTCa/+m8J3dO/U8JAfX+XOTlwTW5R2/WVw=' >> ~/.ssh/known_hosts
       - run: ssh circleci@justthetalk.co.uk /home/circleci/deploy.sh $JUSTTHETALK_BUILD_NUM
 
 workflows:
