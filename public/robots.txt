@@ -1,4 +1,4 @@
-Host: justthetalk.com
+Host: justthetalk.co.uk
 User-agent: *
 Disallow: /admin/
 Disallow: /personal/
