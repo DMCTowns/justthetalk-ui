@@ -178,7 +178,7 @@ export default function Signup() {
         <div className={styles.content}>
           <div className={styles.loginFormContainer}>
             <div>
-              <p>Sign-up sucessful. Please check your email to complete the process.</p>
+              <p>Account created. Please check your email to finish the process.</p>
             </div>
           </div>
         </div>
