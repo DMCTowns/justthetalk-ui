@@ -18,7 +18,17 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import getConfig from 'next/config'
 
-import { FormControl, FormControlLabel, Checkbox, TextField, Button, Card, Paper, Typography } from '@material-ui/core'
+import {
+  FormControl,
+  FormControlLabel,
+  Checkbox,
+  TextField,
+  Button,
+  Card,
+  Paper,
+  Typography,
+  FormHelperText
+} from '@material-ui/core'
 
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -227,6 +237,10 @@ export default function Signup() {
                     value={email}
                     onChange={onChangeEmail}
                   />
+                  <FormHelperText>
+                    This must be a valid email address, as you will need to confirm your login from this account before
+                    you can use the site.
+                  </FormHelperText>
                 </FormControl>
                 <FormControl
                   fullWidth

@@ -53,8 +53,8 @@ export default function Support(props) {
             Support JUSTtheTalk
           </Typography>
           <p>
-            JUSTtheTalk is operated on a not for profit basis for the benefit of its community of users. While both I
-            and the admin teams freely give our time to keep the site up and running, it is not without costs.
+            JUSTtheTalk is operated on a not-for-profit basis for the benefit of its community of users. While the
+            management and admin teams freely give our time to keep the site up and running, it is not without costs.
           </p>
           <p>
             In particular the site runs on a dedicated server which incurs a monthly charge. Without your support it
@@ -69,11 +69,20 @@ export default function Support(props) {
           </Typography>
           <p>
             JUSTtheTalk always has been and always will be free to use. We will never use adverts to generate revenue.
-            Don't worry if you can't afford to make a donation and in any case, all donations are anonymous. There is no
-            recommended amount, just whatever you are able to donate and whatever you think is fair.
+            We are therefore entirely dependent on user support. If you value the site, and can afford to donate to keep
+            it up and running, please do.
           </p>
-          <p>You can make either a one off or regular donations via Paypal using the button below.</p>
-          <div className={styles.donateButton}>
+          <p>
+            There is no recommended amount, just whatever you are able to donate and whatever you think is fair. You can
+            make either a one off or regular donations via Paypal using the button below.
+          </p>
+          <o>
+            <strong>
+              NOTE THAT JTT IS TEMPORARILY UNABLE TO USE PAYPAL. WE ARE WORKING TO SORT OUT A NEW ACCOUNT, AND WILL
+              COMMUNICATE WHEN THIS IS ONCE AGAIN AVAILABLE.
+            </strong>
+          </o>
+          {/* <div className={styles.donateButton}>
             <form
               action="https://www.paypal.com/donate"
               method="post"
@@ -99,13 +108,10 @@ export default function Support(props) {
                 height="1"
               />
             </form>
-          </div>
-          <p>
-            You can also make a donation direct to a bank account if you prefer. Please contact{' '}
-            <a href="mailto:help@justthetalk.co.uk">help@justthetalk.co.uk</a> for details.
-          </p>
-          <p>many thanks,</p>
-          <p>JohnnyTheSailor</p>
+          </div> */}
+
+          <p>Many thanks,</p>
+          <p>JUSTtheTalk</p>
         </Paper>
       </div>
     </MasterLayout>
