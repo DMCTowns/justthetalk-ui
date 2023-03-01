@@ -105,7 +105,7 @@ export default function Signup() {
     }
 
     if (password.length < 8) {
-      setErrorText('Your password must be between at least 8 characters')
+      setErrorText('Your password must be at least 8 characters')
       setPasswordError(true)
       valid = false
     }
