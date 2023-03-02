@@ -88,11 +88,11 @@ echo "Pushing image ${awsroot}/${service}-${environment}:${tag}"
 docker push "${awsroot}/${service}-${environment}:${tag}"
 
 # Deploy image to dev
-# if [ "${environment}" == 'development' ]; then
-#   if [ "${tag}" == 'latest' ]; then
+if [ "${environment}" == 'development' ]; then
+  if [ "${tag}" == 'latest' ]; then
     echo "Deploying service"
     aws --region ${region} --profile ${profile} ecs update-service --cluster "JTT-Production-1" --service "jtt-${service}-service-${environment}" --force-new-deployment >/dev/null
-#   fi
-# fi
+  fi
+fi
 echo "Done"
 exit 0
