@@ -15,19 +15,29 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { IconButton } from '@material-ui/core'
+import { Toolbar, Tooltip, IconButton, Grid, TextField, Button } from '@material-ui/core'
+import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 
 import { FolderList } from '../components/FolderList'
 
-import { selectUserLoadingState, selectUser } from '../redux/userSlice'
+import { selectFolderLoadState } from '../redux/folderSlice'
+import { fetchFolders } from '../redux/folderActions'
+import { selectUserLoadingState, selectUser, selectCurrentFolder, selectCurrentDiscussion } from '../redux/userSlice'
 
 import Drawer from '@material-ui/core/Drawer'
+import Menu from '@material-ui/core/Menu'
+import MenuItem from '@material-ui/core/MenuItem'
+import MenuIcon from '@material-ui/icons/Menu'
+import PersonIcon from '@material-ui/icons/Person'
+import SearchIcon from '@material-ui/icons/Search'
 import CloseIcon from '@material-ui/icons/Close'
+import { Router } from '@material-ui/icons'
 
 import { ToastContainer } from 'react-toastify'
 import { useMediaQuery } from 'react-responsive'
@@ -65,66 +75,15 @@ export default function MasterLayout({ title, leftContent, children }) {
       <div className={isNarrowWindow ? styles.bigContent : styles.standardContent}>
         <div
           className={styles.rightColumnContent}
-          id="search">
-          {currentUser ? (
-            <div className={styles.searchBar}>
-              <SearchBar isNarrowWindow={isNarrowWindow} />
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
+          id="search"></div>
 
         <div
           className={styles.rightColumnContent}
-          id="folders">
-          <Typography
-            variant="h5"
-            color="textSecondary"
-            gutterBottom>
-            Folders
-          </Typography>
-          {currentUser && currentUser.isAdmin ? <FolderList folderType={3}></FolderList> : <></>}
-          <FolderList folderType={0}></FolderList>
-        </div>
+          id="folders"></div>
 
         <div
           className={styles.rightColumnContent}
-          id="links">
-          <Typography
-            variant="h5"
-            color="textSecondary"
-            gutterBottom>
-            Links
-          </Typography>
-          <ul className={styles.linksList}>
-            <li className={styles.supportLink}>
-              <Link href="/support">
-                <a>Support JUSTtheTalk</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/charter">
-                <a>JUSTtheTalk Charter</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/terms">
-                <a>Terms &amp; Conditions</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/help">
-                <a>Help</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
+          id="links"></div>
       </div>
     )
   }

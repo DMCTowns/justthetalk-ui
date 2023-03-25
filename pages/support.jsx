@@ -76,13 +76,7 @@ export default function Support(props) {
             There is no recommended amount, just whatever you are able to donate and whatever you think is fair. You can
             make either a one off or regular donations via Paypal using the button below.
           </p>
-          <o>
-            <strong>
-              NOTE THAT JTT IS TEMPORARILY UNABLE TO USE PAYPAL. WE ARE WORKING TO SORT OUT A NEW ACCOUNT, AND WILL
-              COMMUNICATE WHEN THIS IS ONCE AGAIN AVAILABLE.
-            </strong>
-          </o>
-          {/* <div className={styles.donateButton}>
+          <div className={styles.donateButton}>
             <form
               action="https://www.paypal.com/donate"
               method="post"
@@ -90,7 +84,7 @@ export default function Support(props) {
               <input
                 type="hidden"
                 name="hosted_button_id"
-                value="ES8NZXVEVFRE4"
+                value="84MDCG5KD63BC"
               />
               <input
                 type="image"
@@ -108,7 +102,7 @@ export default function Support(props) {
                 height="1"
               />
             </form>
-          </div> */}
+          </div>
 
           <p>Many thanks,</p>
           <p>JUSTtheTalk</p>
