@@ -94,8 +94,19 @@
   }
 }
 
+.supportBanner {
+  margin-bottom: 10px;
+  padding: 10px;
+  p {
+    margin: 0 0 0.2em 0;
+  }
+  a {
+    color: #cc9900;
+  }
+}
+
 .supportLink {
   a {
-    color: #cc0000;
+    color: #cc9900;
   }
 }
