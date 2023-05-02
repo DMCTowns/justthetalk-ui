@@ -17,6 +17,7 @@ import store from '../redux/store'
 import { Provider } from 'react-redux'
 import { fetchUser } from '../redux/userActions'
 import { LoadingState } from '../redux/constants'
+import Maintenance from './maintenance'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/globals.scss'
 
@@ -73,6 +74,7 @@ function MyApp({ Component, pageProps }) {
             }}
           />
         </Head>
+        {/* <Maintenance {...pageProps} /> */}
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>

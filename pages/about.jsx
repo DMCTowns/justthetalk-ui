@@ -77,7 +77,7 @@ export default function About(props) {
             newspaper, Guardian Unlimited Talkboard (GU Talk). GU Talk was a community of individuals from a wide
             variety of ages, backgrounds and places, and had several specialist boards, such as Football All Talk (FAT)
             and Film Unlimited (FU). The GU Talk boards were closed on February 25th 2011; this came as a shock to what
-            had become a very close community. You can read about the closure here:
+            had become a very close community. You can read about the closure here:{' '}
             <a href="https://www.theguardian.com/help/insideguardian/2011/feb/28/guardian-unlimited-talkboards">
               https://www.theguardian.com/help/insideguardian/2011/feb/28/guardian-unlimited-talkboards
             </a>
@@ -85,9 +85,9 @@ export default function About(props) {
           </p>
 
           <p>
-            One community member took it upon himself to create and run a new forum, for which we have always been
-            grateful. The first version of the new forum was called NOTtheTalk, and the design reflected our origins at
-            the Guardian.
+            One community member, JohnnytheSailor, took it upon himself to create and run a new forum, for which we have
+            always been grateful. The first version of the new forum was called NOTtheTalk, and the design reflected our
+            origins at the Guardian.
           </p>
           <p>
             Over the years new features were added, and as it took on a life of its own and GU Talk faded in memory, the
@@ -95,9 +95,20 @@ export default function About(props) {
             what you see today.
           </p>
           <p>
-            In 2023, the site creator and owner decided to step away from the forum. In his place, a group of volunteers
-            took over technical and administrative responsibility for JUSTtheTalk. No changes were made to the design,
+            In 2023, JohnnytheSailor decided to step away from the forum. In his place, a group of volunteers took over
+            technical and administrative responsibility for JUSTtheTalk, forming a not-for-profit holding company,
+            Reasonable Discourse Ltd (registered in England and Wales no. 14547426). No changes were made to the design,
             but new features may be added later in 2023.
+          </p>
+          <Typography
+            variant="h6"
+            color="textSecondary"
+            gutterBottom>
+            Contact Us
+          </Typography>
+          <p>
+            You can email the owners and administrators at{' '}
+            <a href="mailto:help@justthetalk.co.uk">help@justthetalk.co.uk</a>.
           </p>
         </Paper>
       </div>

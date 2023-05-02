@@ -38,6 +38,7 @@ import { PageTop } from '../components/PageTop'
 import { LoginButtons } from '../components/LoginButtons'
 import { SearchBar } from '../components/SearchBar'
 import SupportBanner from '../components/SupportBanner'
+import MaintenanceBanner from '../components/MaintenanceBanner'
 
 import styles from '../styles/MasterLayout.module.scss'
 
@@ -99,7 +100,12 @@ export default function MasterLayout({ title, leftContent, children }) {
             Links
           </Typography>
           <ul className={styles.linksList}>
-            <li className={styles.supportLink}>
+            {/* <li className={styles.supportLink}>
+              <Link href="/support">
+                <a>Support JUSTtheTalk</a>
+              </Link>
+            </li> */}
+            <li>
               <Link href="/support">
                 <a>Support JUSTtheTalk</a>
               </Link>
@@ -135,7 +141,8 @@ export default function MasterLayout({ title, leftContent, children }) {
       <div className={styles.mainContent}>
         <div className={styles.leftColumn}>{!isNarrowWindow && currentUser ? leftContent : <></>}</div>
         <div className={styles.centreColumn}>
-          <SupportBanner />
+          {/* <SupportBanner /> */}
+          {/* <MaintenanceBanner /> */}
           {isNarrowWindow && router.pathname !== '/login' ? (
             <div className={styles.narrowWidthLoginButtons}>
               <LoginButtons

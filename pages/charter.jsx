@@ -109,6 +109,10 @@ export default function Charter(props) {
             user.
             <br />
             While sockpuppet accounts are not generally prohibited, you cannot create a sockpuppet account for use to
+            avoid a sanction. Any banned user found to have created a sockpuppet account to return to the site will be
+            banned.
+            <br />
+            While sockpuppet accounts are not generally prohibited, you cannot create a sockpuppet account for use to
             avoid a sanction.
             <br />
             All posters have the right to anonymity. JUSTtheTalk will not pass on any user’s email address or other
