@@ -23,7 +23,7 @@ import MasterLayout from '../layouts/maintenance'
 
 import styles from '../styles/Support.module.scss'
 
-export default function About(props) {
+export default function Maintenance(props) {
   return (
     <MasterLayout title="JUSTtheTalk - Site down for maintenance">
       <div className="container">
@@ -54,9 +54,8 @@ export default function About(props) {
           </Typography>
 
           <p>
-            Unfortunately we’ve been having some initial problems with the new site, and, while we’ve been able to make
-            some fixes, we we need to take the site down temporarily while we do others. This may take a while, so
-            please bear with us, and we hope to have your experience back to normal soon.
+            The site is down temporarily while we carry out some restructuring. Normal service should resume approx
+            midnight BST.
           </p>
           <p>The JTT Tech Team</p>
         </Paper>

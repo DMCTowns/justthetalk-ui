@@ -100,7 +100,12 @@ export default function MasterLayout({ title, leftContent, children }) {
             Links
           </Typography>
           <ul className={styles.linksList}>
-            <li className={styles.supportLink}>
+            {/* <li className={styles.supportLink}>
+              <Link href="/support">
+                <a>Support JUSTtheTalk</a>
+              </Link>
+            </li> */}
+            <li>
               <Link href="/support">
                 <a>Support JUSTtheTalk</a>
               </Link>
@@ -137,7 +142,7 @@ export default function MasterLayout({ title, leftContent, children }) {
         <div className={styles.leftColumn}>{!isNarrowWindow && currentUser ? leftContent : <></>}</div>
         <div className={styles.centreColumn}>
           {/* <SupportBanner /> */}
-          <MaintenanceBanner />
+          {/* <MaintenanceBanner /> */}
           {isNarrowWindow && router.pathname !== '/login' ? (
             <div className={styles.narrowWidthLoginButtons}>
               <LoginButtons

@@ -65,9 +65,10 @@ export default function Charter(props) {
             </strong>
           </p>
           <p>
-            For the sake of coherence and ease of moderation, we ask that you keep all topic-related discussion to one
-            thread. Posts or offshoot threads that are posted elsewhere may be deleted. In all cases, the following set
-            of guidelines applies:
+            In a change from our earlier policy, posters are welcome to create threads to discuss different aspects of
+            women’s and transgender rights. For the sake of coherence and ease of moderation, we ask that you keep all
+            topic-related discussion to the Issues folder. Posts or offshoot threads in other folders may be deleted. In
+            all cases, the following policy applies:
           </p>
           <p>
             <strong>Do:</strong>
@@ -83,9 +84,10 @@ export default function Charter(props) {
               same side of the gender discussion.
             </li>
             <li>
-              Report any posts you see that break the Terms & Conditions and Community Standards. This is important, as
-              for legal reasons the admins are unable to proactively moderate the site. We therefore rely on user
-              reports. Please be as specific as possible, as one-word reports do not assist in giving context.
+              Report any posts you see that break the Terms & Conditions and Community Standards, or are in breach of
+              this policy . This is important, as for legal reasons the admins are unable to proactively moderate the
+              site. We therefore rely on user reports. Please be as specific as possible, as one-word reports do not
+              assist in giving context.
             </li>
             <li>
               Consider how your post would be viewed by others if applied to any other grouping, whether by gender,
@@ -98,14 +100,19 @@ export default function Charter(props) {
           <ul>
             <li>
               Make sweeping generalisations about any group, including trans people and gender-critical feminists; you
-              wouldn’t do so for any other protected group
+              wouldn’t do so for any other protected group.
             </li>
             <li>
               Make personal attacks, or be derogatory or aggressive towards other posters or individuals.This includes
               terms such as TERF, cis, TIM or apologist, as well as persistently referring to trans people using
-              pronouns relating to their original sex, or dead-naming them.{' '}
+              pronouns relating to their original sex, or dead-naming them. . Where a person has committed a sex-based
+              crime, we may use our discretion on deleting posts where pronoun use is in dispute.{' '}
             </li>
-            <li>Make comments about individuals as if those individuals were representative of a whole community.</li>
+            <li>
+              Make comments about individuals as if those individuals were representative of a whole community. This
+              includes posting links to stories about particular individuals for the purpose of deriding them or their
+              beliefs.
+            </li>
             <li>Make comments that could prejudice ongoing legal cases, or assume guilt before an outcome is known.</li>
             <li>
               Call any opinion you don’t agree with ‘transphobia’ or TERFism. We allow people to discuss biology and
